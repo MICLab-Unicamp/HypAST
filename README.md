@@ -1,5 +1,4 @@
 # HypAST
-Hypothalamus Automatic Segmentation Tool
 
 HypAST - Hypothalamus Automatic Segmentation Tool
 
