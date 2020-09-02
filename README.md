@@ -16,7 +16,7 @@ There are no necessary prerequisites to run HypAST
 
 HypAST needs approximately 6.5Gb of memory RAM to operate. We suggest to use a computer or virtual machine containing at least 8Gb. In case your computer does not have this space available, you can increase your swap memory.
 
-#Download
+# Download
 
 Please, download HypAST at the following link: https://drive.google.com/drive/folders/1JJSgTeX-NlmWs0zmp9lOeiODZnOrD7F5?usp=sharing
 
@@ -55,8 +55,15 @@ After saving, three new buttons will appear:
 # CITATION
 
 In case you use this tool for research purposes, please, cite our segmentation method:
-
-Rodrigues,L., Rezende,T., Zanesco,A., Hernandez,A.L., França,M., Rittner, L. Hypothalamus fully automatic segmentation from MR images using a U-Net based architecture. SIPAIM, 2019, Colombia.
+@inproceedings{rodrigues2020hypothalamus,
+  title={Hypothalamus fully automatic segmentation from MR images using a U-Net based architecture},
+  author={Rodrigues, Livia and Rezende, Thiago and Zanesco, Ariane and Hernandez, Ana Luisa and Franca, Marcondes and Rittner, Leticia},
+  booktitle={15th International Symposium on Medical Information Processing and Analysis},
+  volume={11330},
+  pages={113300J},
+  year={2020},
+  organization={International Society for Optics and Photonics}
+}
 
 # CONTACT
 
