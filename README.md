@@ -6,9 +6,9 @@ This tool must be used for research only. Not suitable for clinical clinical pur
 
 ## GETTING STARTED
 
-- CreateHDF5(list_data, list_labels, out_path): Creates input for Trainer. Return the .hdf5 file on defined path 
+- CreateHDF5(list_data, list_labels, out_path): Creates input for Trainer. Return the .hdf5 file on defined path.
 
-	list_data: List containing paths of .nii or .nii.gz images
+        list_data: List containing paths of .nii or .nii.gz images
         list_labels: List containing paths of labels (.nii, .nii.gz or .npy)
         out_path: Path were .hdf5 files will be saved
 
@@ -18,8 +18,8 @@ This tool must be used for research only. Not suitable for clinical clinical pur
         out: Path were segmentation will be saved
 
 - Trainer(train_path, chkp_path, val_path, maxep=200, accum=16, weight=[1,4], lr=5e-3, bs=8):   Hypothalamus Segmentation Trainer. Return trained models on given output path.
-
-	train_path: path to h5py train set
+	
+        train_path: path to h5py train set
         chkp_path: checkpoint path
         val_path: path to h5py val set
         maxep: Maximum # of epochs in training (defaul = 200)
