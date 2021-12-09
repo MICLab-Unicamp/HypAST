@@ -31,15 +31,16 @@ This tool must be used for research only. Not suitable for clinical clinical pur
 ## CITATION
 
 In case you use this tool, please, cite our segmentation method:
-@inproceedings{rodrigues2020hypothalamus,
-  title={Hypothalamus fully automatic segmentation from MR images using a U-Net based architecture},
-  author={Rodrigues, Livia and Rezende, Thiago and Zanesco, Ariane and Hernandez, Ana Luisa and Franca, Marcondes and Rittner, Leticia},
-  booktitle={15th International Symposium on Medical Information Processing and Analysis},
-  volume={11330},
-  pages={113300J},
-  year={2020},
-  organization={International Society for Optics and Photonics}
-}
+
+        @inproceedings{rodrigues2020hypothalamus,
+            title={Hypothalamus fully automatic segmentation from MR images using a U-Net based architecture},
+            author={Rodrigues, Livia and Rezende, Thiago and Zanesco, Ariane and Hernandez, Ana Luisa and Franca, Marcondes and Rittner, Leticia},
+            booktitle={15th International Symposium on Medical Information Processing and Analysis},
+            volume={11330},
+            pages={113300J},
+            year={2020},
+            organization={International Society for Optics and Photonics}
+            }
 
 ## CONTACT
 
