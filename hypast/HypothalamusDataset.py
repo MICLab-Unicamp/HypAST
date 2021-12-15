@@ -15,7 +15,7 @@ class HypothalamusDataset(Dataset):
         if self.turn == 'train':
             return self.list_img.shape[-1]-1
         else:
-            return 14#params["val_size"]
+            return int(self.list_img.shape[-1]/90)-1
     
     def __getitem__(self, idx):
                 
@@ -39,7 +39,7 @@ class HypothalamusDataset(Dataset):
             sample = self.transform(image=img, mask = seg.astype(np.uint8))
             img_final = sample['image'].copy()
             seg_final = sample['mask'].copy()
-            img_final = (img_final - img_final.min())/(img_final.max()-img_final.min()) 
+            img_final = (img_final - img_final.min())/(img_final.max()-img_final.min()+0.00001) 
             img_final = img_final*2 - 1
             img_final = img_final.astype(np.float16)
             sample = (torch.from_numpy(img_final).permute(2,0,1).float(), torch.from_numpy(seg_final).long())
@@ -50,7 +50,7 @@ class HypothalamusDataset(Dataset):
             img_final = self.list_img[9:-9, 9:-9,idx*90:idx*90+90]
             seg_final = self.list_seg[9:-9, 9:-9,idx*90:idx*90+90]
 
-            img_final = (img_final - img_final.min())/(img_final.max()-img_final.min()) 
+            img_final = (img_final - img_final.min())/(img_final.max()-img_final.min()+0.00001) 
             img_final = img_final*2 - 1
             img_final = img_final.astype(np.float16)
             sample = (torch.from_numpy(img_final).permute(2,0,1).float(), torch.from_numpy(seg_final).permute(2,0,1).long())

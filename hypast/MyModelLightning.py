@@ -1,7 +1,7 @@
 import os
 import sys
 import torch
-import SegmCorr
+from .Correct2Seg import Correct2Seg
 import numpy as np
 import torch.nn as nn
 import pytorch_lightning as pl
@@ -20,7 +20,7 @@ class MyModelLightning(pl.LightningModule):
 
         self._train_dataloader = train_dataloader
         self._val_dataloader = val_dataloader
-        self.model = SegmCorr.SegmCorr()
+        self.model = Correct2Seg()
         self.class_weights = torch.FloatTensor(weights).cuda()
         self.criteria_seg = nn.CrossEntropyLoss(self.class_weights)
         self.criteria_conf = nn.BCEWithLogitsLoss()

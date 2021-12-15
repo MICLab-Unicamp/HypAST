@@ -7,8 +7,8 @@ import warnings
 import numpy as np
 import torch.nn as nn
 import nibabel as nib
-from Preprocessing import Preprocessing
-from model import SegmentationModel
+from .Preprocessing import Preprocessing
+from .model import SegmentationModel
 from skimage.measure import regionprops
 from nibabel.orientations import axcodes2ornt, ornt_transform, inv_ornt_aff
 warnings.filterwarnings("ignore")     
@@ -16,17 +16,17 @@ if torch.cuda.is_available():
     os.environ["CUDA_VISIBLE_DEVICES"] = "0" 
     device = torch.device("cuda:0")
 else:
-    print('No CUDA device Found')
+    print('No CUDA device Found, using CPU')
+    device = torch.device("cpu")
 
 
 class Predictor():  
     
-        '''
-        Prediction class. Return the segmentation on defined path.
-        input_list: List containing paths of .nii or .nii.gz files to be segmented
-        out: Path were segmentation will be saved
-        '''
-        
+    '''
+    Prediction class. Return the segmentation on defined path.
+    input_list: List containing paths of .nii or .nii.gz files to be segmented
+    out: Path were segmentation will be saved
+    '''
     def __init__(self, input_list, out):
         self.input_list = input_list
         self.out = out
@@ -34,7 +34,7 @@ class Predictor():
     def prediction(self, vol_path):    
         modelseg = SegmentationModel()
         preprocessing = Preprocessing()
-        new_state_dict_seg = torch.load("weights.ckpt")
+        new_state_dict_seg = torch.utils.model_zoo.load_url('https://github.com/MICLab-Unicamp/HypAST/releases/download/v1.0.0/weights.pth')
         modelseg.load_state_dict(new_state_dict_seg)
         modelseg.to(device)
         modelseg.eval()
@@ -87,7 +87,7 @@ class Predictor():
         return img.as_reoriented(transform)  
    
     def predictor (self):
-        for index, vol_path in enumerate(input_list):
+        for index, vol_path in enumerate(self.input_list):
             t1 = time.time()
             print('processing....')
             print(vol_path)

@@ -1,15 +1,13 @@
 import warnings
-import sys
-import HypothalamusDataset
-import SegmCorr
-import MyModelLightning
+from .HypothalamusDataset import HypothalamusDataset
+from .MyModelLightning import MyModelLightning
 import os
 import h5py
 import torch
 import numpy as np
 import argparse
 import pytorch_lightning as pl
-import albumentations as As
+import albumentations as A
 from skimage.measure import regionprops
 from pytorch_lightning.callbacks import ModelCheckpoint
 from torch.utils.data import DataLoader
@@ -53,20 +51,19 @@ class Trainer():
         Ytrain = data_train['label'][:].astype(np.uint8)
         Xval = data_val['data'][:]
         Yval = data_val['label'][:].astype(np.uint8)
-        train_dataset = HypothalamusDataset.HypothalamusDataset(list_img = Xtrain, list_seg = Ytrain, turn = 'train', transform = A.Compose([
+        train_dataset = HypothalamusDataset(list_img = Xtrain, list_seg = Ytrain, turn = 'train', transform = A.Compose([
                                           A.Rotate(limit = (-10,10), p = 0.6),
                                           A.RandomCrop(width=112, height=112),
                                           A.ElasticTransform(p=0.3, alpha=40, sigma=120 * 0.05, alpha_affine=30 * 0.03)
                                                                                                               ]))
         train_dataloader = DataLoader(train_dataset, batch_size = self.bs, shuffle = True)
-        val_dataset = HypothalamusDataset.HypothalamusDataset(list_img = Xval, list_seg = Yval,  turn = 'val',transform = False)
+        val_dataset = HypothalamusDataset(list_img = Xval, list_seg = Yval,  turn = 'val',transform = False)
         val_dataloader = DataLoader(val_dataset, batch_size = self.bs, shuffle = True)
         return train_dataloader, val_dataloader
 
     def trainer(self):
         max_epochs = self.maxep
         accumulate_grad_batches = self.accum
-        print(accumulate_grad_batches)
         checkpoint_path = self.chkp_path
         checkpoint_dir = os.path.dirname(os.path.abspath(checkpoint_path))
         print(f'Files in {checkpoint_dir}: {os.listdir(checkpoint_dir)}')
@@ -92,7 +89,7 @@ class Trainer():
                             )
 
         train_dataloader, val_dataloader = self.data()
-        model = MyModelLightning.MyModelLightning(train_dataloader=train_dataloader,
+        model = MyModelLightning(train_dataloader=train_dataloader,
                             val_dataloader=val_dataloader, weights = self.weight, lr = self.lr)
 
         trainer.fit(model)
