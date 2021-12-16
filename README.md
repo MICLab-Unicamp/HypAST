@@ -1,16 +1,22 @@
 # HypAST - Hypothalamus Automatic Segmentation Tool
 
+To facilitate the use of our method, we provide here a pip package and a graphical user interface. 
+
+Please, check for both bellow.
+
+## PIP PACKAGE
+
 On this package you will find a trained model for hypothalamus segmentation on T1 MRI images and a trainable class, in case you wish to use your own data.
 
 This tool is not suitable for clinical purposes.
 
-## INSTALLATION
+### INSTALLATION
 
         pip install hypast
 
 **HypAST** requires **Python 3.7**.
 
-## GETTING STARTED
+### GETTING STARTED
 
 **HypAST** works on .nii or .nii.gz input files for images and .nii, .nii.gz or .npy for annotations. 
 Using **HypAST** you will be able to predict hypothalamus segmentation using our model or to train with your own data.
