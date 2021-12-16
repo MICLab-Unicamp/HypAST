@@ -131,5 +131,4 @@ After running, a new menu will appear with new options:
 
 For more information or suggestions, please contact liviamarodrigues@gmail.com
 
-See more on https://github.com/MICLab-Unicamp/HypAST
 
