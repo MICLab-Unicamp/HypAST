@@ -82,6 +82,37 @@ Example:
 
     - Segmentation files on defined path
 
+## GRAPHICAL USER INTERFACE
+
+If you wish, you may use our HypAST graphical user interface for prediction, available for Linux.
+
+#### DOWNLOAD
+
+You can download HypAST-GUI at: https://drive.google.com/file/d/1CZrApOsyickRQsPlo97s0P8EnmuDUCfT/view?usp=sharing
+
+After downloading, unzip the file and type on the terminal (inside $PATH/HypAST/):
+           
+            cd dist/HypAST/
+            ./HypAST       
+
+After a few seconds, a window will pop-up and you are ready to go!
+
+#### GETTING STARTED
+
+HypAST-GUI has, at first, three main buttons: "Open file", "Run Code," and "Save Segmentation".
+
+- Click the "Open File" button to choose your .nii or .nii.gz files. A label will appear showing how many files were opened.
+- Click the "Run" button. This will generate the segmentations. Using a CPU (i5 8th gen), each volume will take about 6.5s to be done(the first segmentation may take a little longer). 
+
+After running, a new menu will appear with new options:
+
+- Volume Information: This window shows a spreadsheet with the volume (in cm3) of all hypothalamus segmented. Besides, it has the dispersion graph and boxplot, where you will analyze possible outliers.
+- Texture Information: This window shows a spreadsheet with texture information of all hypothalamus segmented (***ON TRIAL***).
+- Visualization Tool: This window shows all T1 images and masks generated.
+- Save Files: Save your segmentation and attribute files using the "Save Files" button. At this step, you will be saving one .nii mask containing the segmentation for each T1 image opened and two .csv files, one with volume information and the other with texture information. The segmentation files will receive the same name from the original image plus a "_seg" suffix. 
+- Run another analysis: This button resets the menu, making it possible to run a different analysis.
+
+
 ## CONTACT
 
 For more information or suggestions, please contact liviamarodrigues@gmail.com
