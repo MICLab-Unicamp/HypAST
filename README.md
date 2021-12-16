@@ -6,9 +6,9 @@ This tool is not suitable for clinical purposes.
 
 ## INSTALLATION
 
-        pip3 install hypast
+        pip install hypast
 
-**HypAST** requires **Python 3**.
+**HypAST** requires **Python 3.7**.
 
 ## GETTING STARTED
 
