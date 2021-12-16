@@ -1,5 +1,9 @@
 # HypAST - Hypothalamus Automatic Segmentation Tool
 
+Although magnetic resonance imaging (MRI) is the standard exam to evaluate this region, hypothalamic morphological landmarks are unclear, leading to subjectivity and high variability during manual segmentation. **HypAST** is a state-of-the-art tool developed to aid researchers on hypothalamus segmentation. 
+
+<img src=https://github.com/MICLab-Unicamp/HypAST/blob/master/figs/predictions.png>
+
 To facilitate the use of our method, we provide here a pip package and a graphical user interface. 
 
 Please, check for both bellow.
@@ -103,6 +107,8 @@ After downloading, unzip the file and type on the terminal (inside $PATH/HypAST/
 
 After a few seconds, a window will pop-up and you are ready to go!
 
+<img src=https://github.com/MICLab-Unicamp/HypAST/blob/master/figs/hypast1.png>
+
 #### GETTING STARTED
 
 HypAST-GUI has, at first, three main buttons: "Open file", "Run Code," and "Save Segmentation".
@@ -112,12 +118,14 @@ HypAST-GUI has, at first, three main buttons: "Open file", "Run Code," and "Save
 
 After running, a new menu will appear with new options:
 
+
 - Volume Information: This window shows a spreadsheet with the volume (in cm3) of all hypothalamus segmented. Besides, it has the dispersion graph and boxplot, where you will analyze possible outliers.
 - Texture Information: This window shows a spreadsheet with texture information of all hypothalamus segmented (***ON TRIAL***).
 - Visualization Tool: This window shows all T1 images and masks generated.
 - Save Files: Save your segmentation and attribute files using the "Save Files" button. At this step, you will be saving one .nii mask containing the segmentation for each T1 image opened and two .csv files, one with volume information and the other with texture information. The segmentation files will receive the same name from the original image plus a "_seg" suffix. 
 - Run another analysis: This button resets the menu, making it possible to run a different analysis.
 
+<img src=https://github.com/MICLab-Unicamp/HypAST/blob/master/figs/hypast2.png>
 
 ## CONTACT
 
