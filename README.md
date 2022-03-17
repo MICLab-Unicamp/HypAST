@@ -94,13 +94,15 @@ Example:
 
 ## GRAPHICAL USER INTERFACE
 
+**03/17/22: Texture analysis updated!**
+
 If you wish, you may use our HypAST graphical user interface for prediction, available for Linux.
 
 #### DOWNLOAD
 
-You can download HypAST-GUI at: https://drive.google.com/file/d/1CZrApOsyickRQsPlo97s0P8EnmuDUCfT/view?usp=sharing
+You can download HypAST-GUI [HERE](https://drive.google.com/file/d/1ukYanp9w_AKUJ15RSmgwx8LjM73pTKww/view?usp=sharing)
 
-After downloading, unzip the file and type on the terminal (inside <your_path>/HypAST/):
+After downloading, unzip the file and type on the terminal (inside <your_path>/HypAST_0.1/):
            
             cd dist/HypAST/
             ./HypAST       
@@ -120,7 +122,7 @@ After running, a new menu will appear with new options:
 
 
 - Volume Information: This window shows a spreadsheet with the volume (in cm3) of all hypothalamus segmented. Besides, it has the dispersion graph and boxplot, where you will analyze possible outliers.
-- Texture Information: This window shows a spreadsheet with texture information of all hypothalamus segmented (***ON TRIAL***).
+- Texture Information: This window shows a spreadsheet with texture information of all hypothalamus segmented.
 - Visualization Tool: This window shows all T1 images and masks generated.
 - Save Files: Save your segmentation and attribute files using the "Save Files" button. At this step, you will be saving one .nii mask containing the segmentation for each T1 image opened and two .csv files, one with volume information and the other with texture information. The segmentation files will receive the same name from the original image plus a "_seg" suffix. 
 - Run another analysis: This button resets the menu, making it possible to run a different analysis.
