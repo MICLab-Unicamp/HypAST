@@ -95,8 +95,9 @@ Example:
 ## GRAPHICAL USER INTERFACE
 
 
-**09/27/22: New version!**
-**03/17/22: Texture analysis updated!**
+**09/27/22**: New version!
+
+**03/17/22**: Texture analysis updated!
 
 If you wish, you may use our HypAST graphical user interface for prediction, available for Linux.
 
