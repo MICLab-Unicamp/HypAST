@@ -94,13 +94,15 @@ Example:
 
 ## GRAPHICAL USER INTERFACE
 
+
+**09/27/22: New version!**
 **03/17/22: Texture analysis updated!**
 
 If you wish, you may use our HypAST graphical user interface for prediction, available for Linux.
 
 #### DOWNLOAD
 
-You can download HypAST-GUI [HERE](https://drive.google.com/file/d/1ukYanp9w_AKUJ15RSmgwx8LjM73pTKww/view?usp=sharing)
+You can download HypAST-GUI [HERE](https://drive.google.com/file/d/1dUOklPzPwNF3e-u1q7rMD-Sj3y2v7ktS/view?usp=sharing)
 
 After downloading, unzip the file and type on the terminal (inside <your_path>/HypAST_0.1/):
            
