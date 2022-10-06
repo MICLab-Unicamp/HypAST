@@ -105,7 +105,7 @@ If you wish, you may use our HypAST graphical user interface for prediction, ava
 
 You can download HypAST-GUI [HERE](https://drive.google.com/file/d/1dUOklPzPwNF3e-u1q7rMD-Sj3y2v7ktS/view?usp=sharing)
 
-After downloading, unzip the file and type on the terminal (inside <your_path>/HypAST_0.1/):
+After downloading, unzip the file and type on the terminal (inside <your_path>/HypAST_0.2/):
            
             cd dist/HypAST/
             ./HypAST       
