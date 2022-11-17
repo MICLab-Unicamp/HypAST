@@ -132,6 +132,33 @@ After running, a new menu will appear with new options:
 
 <img src=https://github.com/MICLab-Unicamp/HypAST/blob/master/figs/hypast2.png>
 
+## COMPETITION
+
+We now have a competition running on [CodaLab](https://codalab.lisn.upsaclay.fr/competitions/7583)! 
+
+## CITATION
+
+If you use [MiLI dataset](https://sites.google.com/view/calgary-campinas-dataset/hypothalamus-benchmark) or publish papers based on our method or competiton, please cite us:
+
+
+@article{rodrigues2022benchmark,
+
+  title={A Benchmark for Hypothalamus segmentation on T1-weighted MR Images},
+
+  author={Rodrigues, Livia and Rezende, Thiago and Wertheimer, Guilherme and Santos, Yves and Franca, Marcondes and Rittner, Leticia},
+
+  journal={NeuroImage},
+
+  pages={119741},
+
+  year={2022},
+
+  publisher={Elsevier}
+
+}
+
+
+
 ## CONTACT
 
 For more information or suggestions, please contact liviamarodrigues@gmail.com
