@@ -136,6 +136,12 @@ After running, a new menu will appear with new options:
 
 We now have a competition running on [CodaLab](https://codalab.lisn.upsaclay.fr/competitions/7583)! 
 
+## DATASET
+
+Our dataset is composed by a total of 1381 hypothalamus masks (manual and "silver standard") from four different datasets: IXI, CC359, OASIS, and MiLI, being the last one a new dataset, created for this benchmark
+
+You can download our dataset [HERE](https://www.ccdataset.com/download)
+
 ## CITATION
 
 If you use [MiLI dataset](https://sites.google.com/view/calgary-campinas-dataset/hypothalamus-benchmark) or publish papers based on our method or competiton, please cite us:
