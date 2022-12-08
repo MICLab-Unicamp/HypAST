@@ -103,7 +103,7 @@ If you wish, you may use our HypAST graphical user interface for prediction, ava
 
 #### DOWNLOAD
 
-You can download HypAST-GUI [HERE](https://drive.google.com/file/d/12W05DU46bHvuiTfciMuAfC6Xd42bLp_V/view?usp=sharing)
+You can download HypAST-GUI [HERE](https://drive.google.com/file/d/166a5ciTnddTljJKxYOQwF-X11-x0eNu8/view?usp=share_link)
 
 After downloading, unzip the file and type on the terminal (inside <your_path>/HypAST_0.2/):
            
