@@ -7,8 +7,8 @@ import warnings
 import numpy as np
 import torch.nn as nn
 import nibabel as nib
-from .Preprocessing import Preprocessing
-from .model import SegmentationModel
+from Preprocessing import Preprocessing
+from model import SegmentationModel
 from skimage.measure import regionprops
 from nibabel.orientations import axcodes2ornt, ornt_transform, inv_ornt_aff
 warnings.filterwarnings("ignore")     
